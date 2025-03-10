@@ -84,7 +84,7 @@ finished_sandwiches = []
 #remove and add from sandwich_orders to finished_sandwiches
 while sandwich_orders:
     current_sandwich = sandwich_orders.pop()
-    finished_sandwiches.append(current_sandwich)
-    print("I made your tuna " + current_sandwich)
+    finished_sandwiches.append(current_sandwich+" sandwich")
+    print("I made your " + current_sandwich+" sandwich")
 
 
