@@ -1,9 +1,7 @@
 #Exer 1
 print("Exercice--1")
-print("Hello world")
-print("Hello world")
-print("Hello world")
-print("Hello world")
+print("Hello world \n Hello world \n Hello world \n Hello world \n Hello world")
+
 
 #Exer 2
 print("Exercice--2")
