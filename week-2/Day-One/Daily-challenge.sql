@@ -16,7 +16,7 @@ VALUES
     ('Matt', 'Damon', '1970-08-10', 5);
 
 -- Count how many actors are in the table.
-SELECT COUNT(*) AS Total_actors;
+SELECT COUNT(*) AS Total_actors FROM actors;
 
 -- Try to add a new actor with some blank fields. What do you think the outcome will be ?
 INSERT INTO actors (first_name, last_name)
