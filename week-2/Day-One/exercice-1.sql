@@ -1,6 +1,6 @@
 -- -- create items table
 CREATE TABLE items(
-	item_id SERIAL PRIMARY KEY,
+    item_id SERIAL PRIMARY KEY,
     item TEXT,
     price INT
 );
