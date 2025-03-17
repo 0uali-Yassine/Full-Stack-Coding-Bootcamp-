@@ -22,8 +22,8 @@ def main():
     while True:
         choice = get_user_menu_choice()
         if choice == "g":
-            game = Game()
-            result = game.play()
+            result = Game().play()
+            #result = game.play()
             results[result] += 1
         elif choice == "x":
             print_results(results)
