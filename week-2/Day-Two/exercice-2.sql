@@ -27,3 +27,18 @@ WHERE film_id in (15,150)
 --Write a query which should check if your favorite movie exists in the database. Have your query get the film ID, title, description, length and the rental rate, these details can be found in the “film” table.
 SELECT film_id, title, description, length, rental_rate FROM film
 WHERE title = 'Old Boy';
+
+--No luck finding your movie? Maybe you made a mistake spelling the name. Write a query to get the film ID, title, description, length and the rental rate of all the movies starting with the two first letters of your favorite movie.
+SELECT film_id, title, description, length, rental_rate FROM film
+WHERE title LIKE 'Ol%';
+
+--Write a query which will find the 10 cheapest movies.
+SELECT title AS cheapest_movies FROM film
+ORDER BY replacement_cost ASC
+LIMIT 10
+
+-- Not satisfied with the results. Write a query which will find the next 10 cheapest movies.
+SELECT title AS cheapest_movies FROM film
+ORDER BY replacement_cost ASC
+LIMIT 10 OFFSET 10;
+--Bonus: Try to not use LIMIT. "you can use a subquery with ROW_NUMBER()"
