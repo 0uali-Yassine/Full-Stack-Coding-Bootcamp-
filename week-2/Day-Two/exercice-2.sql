@@ -15,3 +15,15 @@ ORDER BY first_name DESC
 --Write a query to get the film ID, title, description, year of release and rental rate in ascending order according to their rental rate.
 SELECT film_id,title,description,release_year,rental_rate FROM film
 ORDER BY rental_rate ASC
+
+--Write a query to get the address, and the phone number of all customers living in the Texas district, these details can be found in the “address” table.
+SELECT address,phone FROM address
+WHERE district = 'Texas'
+
+--Write a query to retrieve all movie details where the movie id is either 15 or 150.
+SELECT * FROM film
+WHERE film_id in (15,150)
+
+--Write a query which should check if your favorite movie exists in the database. Have your query get the film ID, title, description, length and the rental rate, these details can be found in the “film” table.
+SELECT film_id, title, description, length, rental_rate FROM film
+WHERE title = 'Old Boy';
