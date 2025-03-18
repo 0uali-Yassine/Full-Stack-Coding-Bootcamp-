@@ -60,3 +60,16 @@ WHERE inventory.inventory_id IS NULL;
 SELECT city,country FROM city
 JOIN country
 ON country.country_id = city.country_id
+
+--Bonus
+SELECT 
+    customer.customer_id, 
+    customer.first_name, 
+    customer.last_name, 
+    payment.amount, 
+    payment.payment_date, 
+    payment.staff_id
+FROM customer
+JOIN payment ON customer.customer_id = payment.customer_id
+JOIN staff ON payment.staff_id = staff.staff_id
+ORDER BY payment.staff_id;
