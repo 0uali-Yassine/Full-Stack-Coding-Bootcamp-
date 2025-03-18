@@ -42,3 +42,21 @@ SELECT title AS cheapest_movies FROM film
 ORDER BY replacement_cost ASC
 LIMIT 10 OFFSET 10;
 --Bonus: Try to not use LIMIT. "you can use a subquery with ROW_NUMBER()"
+
+--Write a query which will join the data in the customer table and the payment table. 
+SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount, payment.payment_date
+FROM customer
+JOIN payment
+ON customer.customer_id = payment.customer_id
+ORDER BY customer.customer_id;
+
+-- You need to check your inventory. Write a query to get all the movies which are not in inventory.
+SELECT film.film_id, film.title FROM film
+LEFT JOIN inventory
+ON inventory.film_id = film.film_id
+WHERE inventory.inventory_id IS NULL;
+
+--Write a query to find which city is in which country.
+SELECT city,country FROM city
+JOIN country
+ON country.country_id = city.country_id
