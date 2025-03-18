@@ -34,12 +34,12 @@ WHERE title LIKE 'Ol%';
 
 --Write a query which will find the 10 cheapest movies.
 SELECT title AS cheapest_movies FROM film
-ORDER BY replacement_cost ASC
+ORDER BY rental_rate ASC
 LIMIT 10
 
 -- Not satisfied with the results. Write a query which will find the next 10 cheapest movies.
 SELECT title AS cheapest_movies FROM film
-ORDER BY replacement_cost ASC
+ORDER BY rental_rate ASC
 LIMIT 10 OFFSET 10;
 --Bonus: Try to not use LIMIT. "you can use a subquery with ROW_NUMBER()"
 
