@@ -34,7 +34,8 @@ SELECT DISTINCT a.first_name, a.last_name, f.title
 FROM film f
 INNER JOIN film_actor f_a ON f.film_id = f_a.film_id
 INNER JOIN actor a ON f_a.actor_id = a.actor_id
-WHERE a.first_name = 'Penelope' AND a.last_name = 'Monroe' AND f.description LIKE '%sumo wrestler%';
+WHERE a.first_name = 'Penelope' AND a.last_name = 'Monroe' 
+AND f.description ILIKE '%sumo wrestler%';
 --n'exist pas
 
 --6-2
@@ -49,7 +50,8 @@ INNER JOIN rental r ON c.customer_id = r.customer_id
 INNER JOIN inventory i ON r.inventory_id = i.inventory_id
 INNER JOIN film f ON i.film_id = f.film_id
 INNER JOIN payment p ON c.customer_id = p.customer_id
-WHERE r.return_date BETWEEN '2005-07-28' AND '2005-08-01' AND c.first_name = 'Matthew'
+WHERE r.return_date BETWEEN '2005-07-28' AND '2005-08-01'
+AND c.first_name = 'Matthew'
 AND c.last_name = 'Mahan'  AND p.amount > 4.00;
 
 --6-4
