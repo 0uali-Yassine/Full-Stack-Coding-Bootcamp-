@@ -17,8 +17,10 @@ SELECT film_id,title,description,release_year,rental_rate FROM film
 ORDER BY rental_rate ASC
 
 --Write a query to get the address, and the phone number of all customers living in the Texas district, these details can be found in the “address” table.
-SELECT address,phone FROM address
-WHERE district = 'Texas'
+SELECT (first_name,last_name) as full_name,address.phone,address.address  from customer
+JOIN address 
+ON (customer.address_id = address.address_id ) 
+WHERE address.district = 'Texas'
 
 --Write a query to retrieve all movie details where the movie id is either 15 or 150.
 SELECT * FROM film
