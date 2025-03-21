@@ -39,6 +39,7 @@ class MenuManager:
                 cursor.close()
             if connection:
                 connection.close()
+    
 
     @classmethod
     def all_items(cls):
