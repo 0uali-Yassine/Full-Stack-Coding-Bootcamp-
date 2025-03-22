@@ -98,4 +98,27 @@ console.log(isString([1, 2, 4, 0])); // false
 
 const sum = (a, b) => a + b;
 
+//>>> Exercice 5:  Kg and grams
+
+// Function Declaration
+function kgToGrams(kg) {
+    return kg * 1000;
+}
+console.log(kgToGrams(5));
+
+// Function Expression
+const kgToGramsExpr = function(kg) {
+    return kg * 1000;
+};
+console.log(kgToGramsExpr(5)); 
+
+// Fun Declaration vs Fun Expression
+// Fun Declaration is hoisted and can be called before it is defined,
+// while Fun Expression is not hoisted and must be called after being defined.
+
+// One-Line Arrow
+const kgToGramsArrow = kg => kg * 1000;
+console.log(kgToGramsArrow(5)); 
+
+
 
