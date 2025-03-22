@@ -96,4 +96,6 @@ console.log(isString([1, 2, 4, 0])); // false
 
 //>>> Exercice 4: Find the sum
 
+const sum = (a, b) => a + b;
+
 
