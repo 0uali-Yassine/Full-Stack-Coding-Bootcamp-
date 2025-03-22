@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring Squares</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+#grid div {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+    width: 300px;
+}
+.color-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color {
+    width: 90px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button{
+    padding: 10px;
+    margin: 3px;
+    font-size: large;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="color-div">
+            <button onclick="clearAll()">Clear</button>
+            <div class="color-palette">
+                <div class="color-palette">
+                    <div class="color" style="background-color: red;" onclick="changeColor('red')"></div>
+                    <div class="color" style="background-color: green;" onclick="changeColor('green')"></div>
+                    <div class="color" style="background-color: blue;" onclick="changeColor('blue')"></div>
+                    <div class="color" style="background-color: yellow;" onclick="changeColor('yellow')"></div>
+                    <div class="color" style="background-color: orange;" onclick="changeColor('orange')"></div>
+                    <div class="color" style="background-color: purple;" onclick="changeColor('purple')"></div>
+                    <div class="color" style="background-color: pink;" onclick="changeColor('pink')"></div>
+                    <div class="color" style="background-color: brown;" onclick="changeColor('brown')"></div>
+                    <div class="color" style="background-color: brown;" onclick="changeColor('brown')"></div>
+                    <div class="color" style="background-color: cyan;" onclick="changeColor('cyan')"></div>
+                    <div class="color" style="background-color: magenta;" onclick="changeColor('magenta')"></div>
+                    <div class="color" style="background-color: lime;" onclick="changeColor('lime')"></div>
+                    <div class="color" style="background-color: indigo;" onclick="changeColor('indigo')"></div>
+                    <div class="color" style="background-color: violet;" onclick="changeColor('violet')"></div>
+                    <div class="color" style="background-color: gray;" onclick="changeColor('gray')"></div>
+                    <div class="color" style="background-color: beige;" onclick="changeColor('beige')"></div>
+                    <div class="color" style="background-color: gold;" onclick="changeColor('gold')"></div>
+                    <div class="color" style="background-color: coral;" onclick="changeColor('coral')"></div>
+                    <div class="color" style="background-color: peachpuff;" onclick="changeColor('peachpuff')"></div>
+                </div>
+            </div>
+        </div>
+        <div id="grid"></div>
+    </div>
+
+    <script src="/week-3/Day-Four/coloringGame.js"></script>
+</body>
+</html>
