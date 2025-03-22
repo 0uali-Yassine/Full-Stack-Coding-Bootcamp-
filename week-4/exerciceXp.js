@@ -140,3 +140,46 @@ console.log(kgToGramsArrow(5));
 
 //>>> Exercise 8 : Juice Bar
 
+//  <div id="juiceBar"></div>
+
+  // Part I: 
+
+  // Outer fun
+  function makeJuice(size) {
+    // Inner fun 
+    function addIngredients(ingredient1, ingredient2, ingredient3) {
+        const juiceMessage = `The client wants a ${size} drink juice, containing ${ingredient1}, ${ingredient2}, ${ingredient3}.`;
+        document.getElementById('juiceBar').textContent = juiceMessage;
+    }
+
+    addIngredients('apple', 'bnana', 'dates')
+}
+
+makeJuice('medium');
+
+
+// Part II:
+
+// Outer fun
+function makeJuice2(size) {
+    let ingredients = [];
+
+    function addIngredients(ingredient1, ingredient2, ingredient3) {
+        ingredients.push(ingredient1, ingredient2, ingredient3);
+    }
+
+    function displayJuice() {
+        const juiceMessage = `The client wants a ${size} drink juice, containing ${ingredients.join(', ')}.`;
+        document.getElementById('juiceBar').textContent = juiceMessage;
+    }
+
+    addIngredients('apple', 'banana', 'orange');
+    addIngredients('kiwi', 'strwbery', 'mango');
+
+    displayJuice();
+}
+
+makeJuice2('large');
+
+
+
