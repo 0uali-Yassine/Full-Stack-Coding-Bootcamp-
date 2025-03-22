@@ -1,3 +1,5 @@
+//>>> Exercise 1 : Scope
+
 // #1
 function funcOne() {
     let a = 5;
@@ -49,8 +51,6 @@ funcFour(); // Prediction: a =  "hello"
 funcFive(); // Prediction: a =  "hello"  because 'window.a' is globally access
 // No change if 'a'  declared with const instead of let because the assign is using the `window` object
 
-
-
 // #4
 let a = 1; 
 function funcSix() {
@@ -66,7 +66,6 @@ funcSix(); // Prediction: The alert will show 'test', because  'a' inside the fu
 // No change if 'a'  declared with const instead of let  inside `funcSix` would still  the global variable 'a' and output "test".
 
 
-
 // #5
 let a = 2; 
 if (true) {
@@ -79,3 +78,13 @@ alert(`outside of the if block ${a}`); // a = 2
 
 // #5.2 What will happen if the variable is declared with const instead of let?
 //No change if 'a'  declared with const instead of let inside the if block, the value will be the same.
+
+
+//>>> Exercise 2 : Ternary operator
+
+const winBattle = () => true;
+
+const experiencePoints = winBattle() ? 10 : 1;
+
+console.log(experiencePoints); 
+
