@@ -3,8 +3,8 @@
 // #1
 function funcOne() {
     let a = 5;
-    if(a > 1) { 
-        a = 3; 
+    if (a > 1) {
+        a = 3;
     }
     alert(`inside the funcOne function ${a}`); // The final value of 'a' is 3
 }
@@ -18,13 +18,13 @@ funcOne(); // Prediction: The alert will show "inside the funcOne function 3"
 
 
 // #2
-let a = 0; 
+let a = 0;
 function funcTwo() {
     a = 5;
 }
 
 function funcThree() {
-    alert(`inside the funcThree function ${a}`); 
+    alert(`inside the funcThree function ${a}`);
 }
 
 // #2.1 - run in the console:
@@ -39,11 +39,11 @@ funcThree(); // Prediction: a = 5
 
 // #3
 function funcFour() {
-    window.a = "hello"; 
+    window.a = "hello";
 }
 
 function funcFive() {
-    alert(`inside the funcFive function ${a}`); 
+    alert(`inside the funcFive function ${a}`);
 }
 
 // #3.1 - run in the console:
@@ -52,9 +52,9 @@ funcFive(); // Prediction: a =  "hello"  because 'window.a' is globally access
 // No change if 'a'  declared with const instead of let because the assign is using the `window` object
 
 // #4
-let a = 1; 
+let a = 1;
 function funcSix() {
-    let a = "test"; 
+    let a = "test";
     alert(`inside the funcSix function ${a}`);
 }
 
@@ -67,7 +67,7 @@ funcSix(); // Prediction: The alert will show 'test', because  'a' inside the fu
 
 
 // #5
-let a = 2; 
+let a = 2;
 if (true) {
     let a = 5;
     alert(`in the if block ${a}`); //  a = 5
@@ -85,7 +85,7 @@ alert(`outside of the if block ${a}`); // a = 2
 const winBattle = () => true;
 const experiencePoints = winBattle() ? 10 : 1;
 
-console.log(experiencePoints); 
+console.log(experiencePoints);
 
 
 //>>> Exercice 3:  Is it a string ?
@@ -107,10 +107,10 @@ function kgToGrams(kg) {
 console.log(kgToGrams(5));
 
 // Function Expression
-const kgToGramsExpr = function(kg) {
+const kgToGramsExpr = function (kg) {
     return kg * 1000;
 };
-console.log(kgToGramsExpr(5)); 
+console.log(kgToGramsExpr(5));
 
 // Fun Declaration vs Fun Expression
 // Fun Declaration is hoisted and can be called before it is defined,
@@ -118,7 +118,23 @@ console.log(kgToGramsExpr(5));
 
 // One-Line Arrow
 const kgToGramsArrow = kg => kg * 1000;
-console.log(kgToGramsArrow(5)); 
+console.log(kgToGramsArrow(5));
 
 
+//>>> Exercise 6 : Fortune teller
+
+// <div id="fortuneResult"></div>
+
+    // Self-invoking fun 
+    (function (numChildren, partnerName, location, jobTitle) {
+        const fortuneMessage = `You will be a ${jobTitle} in ${location}, and married to ${partnerName} with ${numChildren} kids.`;
+
+        // display result in DOM
+        document.getElementById('fortuneResult').textContent = fortuneMessage;
+    })(0, "Mbghitch", "Casa", "Front-end dev"); 
+
+
+
+//>>> Exercise 7 : Welcome
+//>>> Exercise 8 : Juice Bar
 
