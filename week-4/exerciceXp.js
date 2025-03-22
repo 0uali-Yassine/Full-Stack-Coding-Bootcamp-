@@ -83,8 +83,17 @@ alert(`outside of the if block ${a}`); // a = 2
 //>>> Exercise 2 : Ternary operator
 
 const winBattle = () => true;
-
 const experiencePoints = winBattle() ? 10 : 1;
 
 console.log(experiencePoints); 
+
+
+//>>> Exercice 3:  Is it a string ?
+const isString = value => typeof value === 'string';
+
+console.log(isString('hello')); // true
+console.log(isString([1, 2, 4, 0])); // false
+
+//>>> Exercice 4: Find the sum
+
 
