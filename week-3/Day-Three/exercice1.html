@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercises-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-top:30px;
+        }
+
+        label,input {
+            display:block;
+        }  
+        .fade {
+            animation: fadeOut 2s forwards;
+        }
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Exercise 1: Change the article -->
+    <article>
+        <h1>Some Facts</h1>
+        <h2>The Chocolate</h2>
+        <h3>History of the chocolate</h3>
+        <p>Chocolate is made from tropical Theobroma cacao tree seeds. Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p>After the European discovery of the Americas, chocolate became very popular in the wider world, and its demand exploded.</p>
+        <p>Chocolate has since become a popular food product that millions enjoy every day, thanks to its unique, rich, and sweet taste.</p>
+        <p>But what effect does eating chocolate have on our health?</p>
+    </article>
+    <button>Bold Paragraphs</button>
+  
+     <!-- Exercise 2: Work with forms -->
+    <form id="myForm">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <ul class="usersAnswer"></ul>
+     <!-- Exercise 3: Transform the sentence -->
+    <p class="paraExercice3"><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the <strong>end</strong> you <strong>will</strong> be great Developers! <strong>Enjoy</strong> the <strong>JavaScript</strong> lessons</p>
+
+    <!-- Exercise 4: Volume of a sphere -->
+    <p>Input radius value and get the volume of a sphere.</p>
+    <form id="MySecForm">
+        <label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
+        <label for="volume">Volume</label><input type="text" name="volume" id="volume" readonly>
+        <input type="submit" value="Calculate" id="submit">
+    </form>
+    <script src="/week-3/Day-Three/exercice1.js"></script>
+</body>
+</html>
