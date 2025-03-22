@@ -182,4 +182,3 @@ function makeJuice2(size) {
 makeJuice2('large');
 
 
-
