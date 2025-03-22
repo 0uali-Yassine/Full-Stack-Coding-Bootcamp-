@@ -136,5 +136,7 @@ console.log(kgToGramsArrow(5));
 
 
 //>>> Exercise 7 : Welcome
+// go!! to exercice7.js file and Navbar.html file
+
 //>>> Exercise 8 : Juice Bar
 
