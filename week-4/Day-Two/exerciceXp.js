@@ -93,3 +93,25 @@ const combineStr = epic.reduce((acc, currV) => {
 
 console.log(combineStr);
 
+
+// Exercise 6 : Employees #2 
+
+const students = [
+    { name: "Ray", course: "Computer Science", isPassed: true }, 
+    { name: "Liam", course: "Computer Science", isPassed: false }, 
+    { name: "Jenner", course: "Information Technology", isPassed: true }, 
+    { name: "Marco", course: "Robotics", isPassed: true }, 
+    { name: "Kimberly", course: "Artificial Intelligence", isPassed: false }, 
+    { name: "Jamie", course: "Big Data", isPassed: false }
+  ];
+  
+  // 1. filter() 
+  const passeStdnt = students.filter(stdnt => stdnt.isPassed);
+  
+  console.log(passeStdnt);
+  
+  // 2. Bonus: 
+  passeStdnt.forEach(stdnt => {
+    console.log(`Good job ${stdnt.name}, you passed the course in ${stdnt.course}`);
+  });
+  
