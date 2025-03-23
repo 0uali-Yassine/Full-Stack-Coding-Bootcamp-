@@ -43,3 +43,15 @@ for (let i = 0; i < colors.length; i++) {
 
     console.log(`${indx}${sufx} choice is ${colors[i]}.`);
 }
+
+
+// Exercise 3 : Analyzing
+
+//------1------
+['bread', 'carrot', 'potato', 'chicken', 'apple', 'orange']
+
+//------2------
+['U', 'S', 'A']
+
+//------Bonus------
+// []
