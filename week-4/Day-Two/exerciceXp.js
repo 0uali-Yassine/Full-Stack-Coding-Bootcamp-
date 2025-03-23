@@ -18,7 +18,7 @@ if (colors.includes("Violet")) {
 const ordinal = ["th", "st", "nd", "rd"];
 
 for (let i = 0; i < colors.length; i++) {
-    let indx = i + 1; 
+    let indx = i + 1;
     let sufx;
 
     // special case: 11/12/13 = 'th'
@@ -27,13 +27,13 @@ for (let i = 0; i < colors.length; i++) {
     } else {
         switch (indx % 10) {
             case 1:
-                sufx = ordinal[1]; 
+                sufx = ordinal[1];
                 break;
             case 2:
-                sufx = ordinal[2]; 
+                sufx = ordinal[2];
                 break;
             case 3:
-                sufx = ordinal[3]; 
+                sufx = ordinal[3];
                 break;
             default:
                 sufx = ordinal[0];
@@ -67,20 +67,29 @@ const users = [
     { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
     { firstName: 'Wes', lastName: 'Reid', role: 'Instructor' },
     { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor' }
-  ];
-  
-  // 1. Using map()
-  const welcomeStudents = users.map(user => `Hello ${user.firstName}`);
-  console.log(welcomeStudents);
-  
-  // 2. Using filter() 
-  const fullStackResidents = users.filter(user => user.role === 'Full Stack Resident');
-  console.log(fullStackResidents);
-  
-  // 3. Bonus: filter() && map()
-  const fullStackLastNames = users
+];
+
+// 1. Using map()
+const welcomeStudents = users.map(user => `Hello ${user.firstName}`);
+console.log(welcomeStudents);
+
+// 2. Using filter() 
+const fullStackResidents = users.filter(user => user.role === 'Full Stack Resident');
+console.log(fullStackResidents);
+
+// 3. Bonus: filter() && map()
+const fullStackLastNames = users
     .filter(user => user.role === 'Full Stack Resident')
     .map(user => user.lastName);
-  
-  console.log(fullStackLastNames);
-  
+
+console.log(fullStackLastNames);
+
+// Exercise 5 : Star Wars
+const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+const combineStr = epic.reduce((acc, currV) => {
+  return acc + " " + currV;
+});
+
+console.log(combineStr);
+
