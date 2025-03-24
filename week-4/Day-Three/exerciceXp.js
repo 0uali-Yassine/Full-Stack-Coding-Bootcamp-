@@ -28,10 +28,10 @@ displayStudentInfo({ first: 'Elie', last: 'Schoppik' });
 
 // Exercise 3: User & id
 
-const users = { 
-    user1: 18273, 
-    user2: 92833, 
-    user3: 90315 
+const users = {
+    user1: 18273,
+    user2: 92833,
+    user3: 90315
 }
 
 const usersArray = Object.entries(users);
@@ -39,3 +39,19 @@ console.log(usersArray);
 
 const multipleUsers = Object.entries(users).map(([key, value]) => [key, value * 2]);
 console.log(multipleUsers);
+
+
+// Exercise 4 : Person class
+
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+const member = new Person('John');
+console.log(typeof member); // "object"
+
+
+// Exercise 5 : Dog class
+
