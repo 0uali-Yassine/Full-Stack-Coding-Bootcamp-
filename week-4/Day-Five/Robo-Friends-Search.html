@@ -6,45 +6,74 @@
     <title>RoboFriends</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background: #f5f5f5;
+            background: #f5f5f5 url('https://raw.githubusercontent.com/devtlv/studentsGitHub/refs/heads/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/circuit-pattern.png');
             padding: 20px;
+            margin: 0;
         }
         h1 {
             color: #333;
+            font-size: 3rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         #search {
-            padding: 10px;
-            width: 300px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 15px 25px;
+            width: 350px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            outline: none;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            color: #34495e;
+            border: 2px solid transparent;
         }
         .card-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            padding: 20px;
         }
         .card {
-            background: white;
-            border-radius: 8px;
+            background: #fff;
+            border-radius: 10px;
             padding: 15px;
-            width: 200px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .image-container {
+            background: url('https://raw.githubusercontent.com/devtlv/studentsGitHub/refs/heads/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/card-pattern.png');
+            background-size: cover;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            position: relative;
         }
         .card img {
             width: 100%;
             height: auto;
-            border-radius: 4px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         .card h2 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin: 10px 0 5px;
             color: #333;
         }

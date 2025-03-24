@@ -77,18 +77,20 @@ const robots = [
 function createRobotCards(robotsArray) {
     const container = document.getElementById('cardContainer');
     container.innerHTML = ''; // lear exist cards for searsh!!!
-    
+
     robotsArray.forEach(robot => {
         const card = document.createElement('div');
         card.className = 'card';
-        
-        const {name,email,image} = robot;
+
+        const { name, email, image } = robot;
         card.innerHTML = `
-            <img src="${image}" alt="${name}">
-            <h2>${name}</h2>
-            <p>${email}</p>
+            <div class="image-container">
+                        <img src="${image}" alt="${name}">
+                    </div>
+                    <h2>${name}</h2>
+                    <p>${email}</p>
         `;
-        
+
         container.appendChild(card);
     });
 }
@@ -98,7 +100,7 @@ createRobotCards(robots);
 // search func
 document.getElementById('search').addEventListener('input', (e) => {
     const searchKeyword = e.target.value.toLowerCase();
-    const filteredRobots = robots.filter(robot => 
+    const filteredRobots = robots.filter(robot =>
         robot.name.toLowerCase().includes(searchKeyword)
     );
     createRobotCards(filteredRobots);
