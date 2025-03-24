@@ -54,4 +54,26 @@ console.log(typeof member); // "object"
 
 
 // Exercise 5 : Dog class
+class Dog {
+    constructor(name) {
+      this.name = name;
+    }
+  };
+
+// successfully extend the Dog class is the bellow
+class Labrador extends Dog {
+    constructor(name, size) {
+      super(name);
+      this.size = size;
+    }
+  };
+  
+
+// Exercise 6 : Challenges
+
+// 1.
+//[2] === [2] >>> false  
+//{} === {} >>> false 
+
+// 2.
 
