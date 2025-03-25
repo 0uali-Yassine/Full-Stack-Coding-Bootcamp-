@@ -36,4 +36,5 @@ const rejectedPromise = Promise.reject("Boo!");
 rejectedPromise.catch(error => console.log(error));
 
 
-// Exercise 4: quizz - not mandatory
+// Exercise 4: quizz - 
+// not mandatory
