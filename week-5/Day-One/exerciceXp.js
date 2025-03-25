@@ -17,16 +17,23 @@ compareToTen(8)
     .then(result => console.log(result))
     .catch(error => console.log(error));
 
-    
+
 // Exercise 2 : Promises
 const myPromise = new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Success");
+        resolve("Success");
     }, 4000);
-  });
-  
-  myPromise.then(result => console.log(result)); // Expected output after 4 seconds: "Success"
+});
 
-  
+myPromise.then(result => console.log(result)); 
+
+
 // Exercise 3 : Resolve & Reject
+const resolvedPromise = Promise.resolve(3);
+resolvedPromise.then(value => console.log(value));
+
+const rejectedPromise = Promise.reject("Boo!");
+rejectedPromise.catch(error => console.log(error));
+
+
 // Exercise 4: quizz - not mandatory
