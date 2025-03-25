@@ -19,5 +19,14 @@ compareToTen(8)
 
     
 // Exercise 2 : Promises
+const myPromise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Success");
+    }, 4000);
+  });
+  
+  myPromise.then(result => console.log(result)); // Expected output after 4 seconds: "Success"
+
+  
 // Exercise 3 : Resolve & Reject
 // Exercise 4: quizz - not mandatory
