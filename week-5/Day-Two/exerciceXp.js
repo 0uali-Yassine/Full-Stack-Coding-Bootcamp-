@@ -22,3 +22,21 @@ fetch("https://api.giphy.com/v1/gifs/search?q=sun&limit=10&offset=2&rating=g&api
     })
     .then(data => console.log(data))
     .catch(error => console.error("Error fetching GIFs:", error));
+
+
+// Exercise 3: Async function
+
+async function getStarship() {
+    try {
+        let response = await fetch("https://www.swapi.tech/api/starships/9/");
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        let data = await response.json();
+        console.log(data.result);
+    } catch (error) {
+        console.error("Error fetching Star Wars data:", error);
+    }
+}
+
+getStarship();
