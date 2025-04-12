@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emoji Guessing Game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Guess the Emoji!</h1>
+    <h2><%= question.correct.emoji %></h2>
+
+    <form method="POST" action="/guess">
+        <% question.options.forEach(opt => { %>
+            <button type="submit" name="choice" value="<%= opt %>"><%= opt %></button>
+        <% }) %>
+    </form>
+
+    <p>Score: <%= score %></p>
+</body>
+</html>
