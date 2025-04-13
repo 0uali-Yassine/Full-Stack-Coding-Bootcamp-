@@ -6,7 +6,7 @@ const todoRoutes = require('./routes/todos');
 
 app.use(express.json()); 
 
-app.use('/', todoRoutes);
+app.use('/todos', todoRoutes);
 
 
 
