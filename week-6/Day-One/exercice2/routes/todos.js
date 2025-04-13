@@ -29,7 +29,7 @@ router.put('/:id',(req,res)=>{
     const _id = parseInt(req.params.id);
     const {title,complete} = req.body;
     const findTodo = todos.find(todo => todo._id == _id);
-    if (findTodo) res.status(404).json({message:'todo not found'});
+    if (!findTodo) res.status(404).json({message:'todo not found'});
 
     findTodo.title = title;
     findTodo.complete = complete;
@@ -44,3 +44,5 @@ router.delete('/:id',(req,res)=>{
     res.json({ message: 'Todo deleted' });
 
 })
+
+module.exports = router;
